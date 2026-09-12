@@ -1,0 +1,10 @@
+{
+	"name": "BricksCounter",
+	"plugin-id": "Text",
+	"sid": 438695898340933,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

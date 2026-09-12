@@ -1,0 +1,69 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "gameovereasylevel",
+					"sid": 683087826696586
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 252886880134181,
+					"parameters": {
+						"layout": "Game"
+					}
+				}
+			],
+			"sid": 122490728773267
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "hardlevel",
+					"sid": 500261914458407
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 694714929178582,
+					"parameters": {
+						"layout": "HardLevel"
+					}
+				}
+			],
+			"sid": 940429967570269
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "gameoverhardlevel",
+					"sid": 336938237022120
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 545731338177069,
+					"parameters": {
+						"layout": "HardLevel"
+					}
+				}
+			],
+			"sid": 825652400341420
+		}
+	],
+	"sid": 398016138494078
+}

@@ -1,0 +1,150 @@
+{
+	"name": "esSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 364109329563504
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "Ball",
+					"sid": 713245906358818,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "90"
+					}
+				}
+			],
+			"sid": 239351426867672
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ball",
+					"sid": 513269562582895,
+					"parameters": {
+						"object": "Brick"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "start-fade",
+					"objectClass": "Brick",
+					"sid": 888225578161438,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Brick",
+					"sid": 232029659831486,
+					"behaviorType": "Solid",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 989363677025148
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-fade-out-finished",
+					"objectClass": "Brick",
+					"sid": 438388902066496,
+					"behaviorType": "Fade"
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Brick",
+					"sid": 592946596937301
+				}
+			],
+			"sid": 662515960149637
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 146718312095810,
+					"parameters": {
+						"first-value": "Brick.Count",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 950225866815991,
+					"parameters": {
+						"layout": "Win"
+					}
+				}
+			],
+			"sid": 179913136768685
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Ball",
+					"sid": 818027128011909,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "480"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 247843244015547,
+					"parameters": {
+						"layout": "Lose"
+					}
+				}
+			],
+			"sid": 397985832636682
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 644226085083820
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "BricksCounter",
+					"sid": 842121886748389,
+					"parameters": {
+						"text": "\"Bricks Left: \" & Brick.Count"
+					}
+				}
+			],
+			"sid": 988334302603002
+		}
+	],
+	"sid": 707751304831039
+}
